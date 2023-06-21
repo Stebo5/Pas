@@ -1,4 +1,5 @@
-import socket, select
+import select
+import socket
 from time import gmtime, strftime
 
 HOST = '127.0.0.1'

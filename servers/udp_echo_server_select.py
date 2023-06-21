@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-import socket, select, sys
+import socket
+import sys
 from time import gmtime, strftime
 
 HOST = '127.0.0.1'

@@ -1,7 +1,20 @@
 import argparse
+import socket
 from typing import Iterator
 
 from socket_client import SocketClient, SocketError
+
+
+def tcp_socket(host, port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.bind((host, port))
+    return sock
+
+
+def udp_socket(host, port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.bind((host, port))
+    return sock
 
 
 def get_input() -> tuple[str, int]:
